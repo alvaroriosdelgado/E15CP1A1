@@ -62,6 +62,11 @@ class HistoriesController < ApplicationController
     end
   end
 
+  def user_histories
+    @histories = helpers.current_user.histories
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_history
